@@ -33,7 +33,7 @@ parallelism on a cluster.
 val data = spark.read.
   option("inferSchema", true).
   option("header", false).
-  csv("hdfs:///tmp/KDDCup/kddcup.data").
+  csv("hdfs:///user/sowen/aaws-examples/ch05/kddcup.data").
   toDF(
     "duration", "protocol_type", "service", "flag",
     "src_bytes", "dst_bytes", "land", "wrong_fragment", "urgent",

@@ -35,7 +35,7 @@ on the data.
 val dataWithoutHeader = spark.read.
       option("inferSchema", true).
       option("header", false).
-      csv("hdfs:///tmp/Covtype/covtype.data")
+      csv("hdfs:///user/nisha/Data/covtype.data")
 val colNames = Seq(
         "Elevation", "Aspect", "Slope",
         "Horizontal_Distance_To_Hydrology", "Vertical_Distance_To_Hydrology",
@@ -291,11 +291,12 @@ confusionMatrix.show()
 /* 
 Data prep for the variable importance plot. 
 */
-inputCols.mkString(",")
+
 val varImp = forestModel.featureImportances.toArray.toSeq
 case class treeData(feature: String, importance: Double, index: Double)
-val treeResults = varImp.indices.map{ i =>
-      treeData(inputCols(i), varImp(i), i)
+val featureNames = unencTrainData.columns.filter(inputCols)
+val treeResults = featureNames.indices.map{ i =>
+      treeData(featureNames(i), varImp(i), i)
     }.sortBy(-_.importance)
 
 val features = treeResults.map(_.feature)
@@ -325,9 +326,9 @@ barChart.getPlot().setBackgroundPaint(Color.WHITE)
 barChart.setBorderVisible(false)
 import org.jfree.chart.ChartUtilities
 import java.io.File
-val varImpChart = new File( "./advanced-analytics-with-spark/images/Ch04RandomForest.jpeg" )
+val varImpChart = new File( "./images/Ch04RandomForest.jpeg" )
 ChartUtilities.saveChartAsJPEG(varImpChart, barChart, 1600, 600)
 /*
-![alt text](./advanced-analytics-with-spark/images/Ch04RandomForest.jpeg)
+![alt text](./images/Ch04RandomForest.jpeg)
 */
    
