@@ -14,5 +14,5 @@
 	path = cdsw-ds-for-telco
 	url = git@github.com:gregoryg/cdsw-ds-for-telco
 [submodule "cdsw-basketball-stats"]
-	path = cdsw-basketball-stats
+	path = basketball-stats
 	url = git@github.com:gregoryg/cdsw-basketball-stats.git
