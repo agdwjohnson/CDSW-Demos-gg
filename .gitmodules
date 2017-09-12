@@ -1,17 +1,17 @@
 [submodule "cdsw-ibis-test"]
-	path = cdsw-ibis-test
+	path = ibis-test
 	url = git@github.com:gregoryg/cdsw-ibis-test.git
 [submodule "cdsw-health-mortality"]
-	path = cdsw-health-mortality
+	path = health-mortality
 	url = git@github.com:gregoryg/cdsw-health-mortality.git
 [submodule "cdsw-hail-genetics-tutorial"]
-	path = cdsw-hail-genetics-tutorial
+	path = hail-genetics-tutorial
 	url = git@github.com:gregoryg/cdsw-hail-genetics-tutorial.git
 [submodule "cdsw-flight-analytics"]
-	path = cdsw-flight-analytics
+	path = flight-analytics
 	url = git@github.com:gregoryg/cdsw-flight-analytics
 [submodule "cdsw-ds-for-telco"]
-	path = cdsw-ds-for-telco
+	path = ds-for-telco
 	url = git@github.com:gregoryg/cdsw-ds-for-telco
 [submodule "cdsw-basketball-stats"]
 	path = basketball-stats
