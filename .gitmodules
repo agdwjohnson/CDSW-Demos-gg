@@ -19,3 +19,6 @@
 [submodule "predictive-maintenance"]
 	path = predictive-maintenance
 	url = git@github.com:gregoryg/predictive-maintenance.git
+[submodule "bay-area-bikeshare"]
+	path = cdsw-bay-area-bikeshare
+	url = git@github.com:gregoryg/cdsw-bay-area-bikeshare.git
